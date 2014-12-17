@@ -13,7 +13,7 @@ end
 post '/result' do
 	def anagram_checker(word_one, word_two)
 	sorted_array_from_word_one = word_one.downcase.split("").sort
-	sorted_array_from_word_two = word_one.downcase.split("").sort
+	sorted_array_from_word_two = word_two.downcase.split("").sort
 
 		if sorted_array_from_word_one == sorted_array_from_word_two
 			Anagram.create({word_one: word_one, word_two: word_two, is_anagram: true})
